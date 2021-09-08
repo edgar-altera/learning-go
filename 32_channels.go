@@ -16,14 +16,14 @@ func main() {
 
 	go add(channel2)
 
-	channel2 <- 50
+	channel2 <- 50 // Send
 
 	fmt.Println("Bye")
 }
 
 func add(ch chan int) {
 
-	number := <-ch
+	number := <-ch // Receive
 	
 	fmt.Println(250 + number)
 }
